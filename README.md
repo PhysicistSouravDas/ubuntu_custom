@@ -4,12 +4,10 @@ Here, I will store all ubuntu customizations done by me, from various sources.
 
 **Table of Contents**
 
-* [Dock](#dock)
 * [Battery Health Charging](#battery-health-charging)
 * [Nodejs and npm](#nodejs-npm)
 * [Environment Variables PATH](#env-vars-path)
-
-## Dock {#dock} [🔗](#dock)
+* [Dock](#dock)
 
 ## Battery Health Charging {#battery-health-charging} [🔗](#battery-health-charging)
 
@@ -22,6 +20,7 @@ Put this in `/etc/crontab`:
 @reboot root echo 60 > /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
 This most probably only works in ASUS Laptops.
+
 Source: 
 
 * [https://askubuntu.com/a/1264105](https://askubuntu.com/a/1264105)
@@ -70,9 +69,23 @@ The output will be like this:
 /home/physicistsouravdas/gems/bin:/home/physicistsouravdas/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin://home/physicistsouravdas/.env_vars/bin
 ```
 
+## Dock {#dock} [🔗](#dock)
+
+The dock in Ubuntu can be fully customized. If you don't want the default sticky dock at the left, then one can use GNOME Shell Extensions, which has many options to customize the dock.
+
+To move the *Show Applications* icon to the top/front, then, 
+```bash
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+```
+Many other options can be explored. If you want to get the value of a setting, just use `get` instead of `set`.
+
+Source:
+
+* [https://askubuntu.com/a/966777](https://askubuntu.com/a/966777)
+
 ---
 
-Last Updated: 1st November 2022
+Last Updated: 20th February 2024
 
 ###### Note: To run markdown server, run `python3 -m ReadEm.serve`
 **Thanks to [ReadEm](https://github.com/jockerz/ReadEm) for the Markdown server.**
